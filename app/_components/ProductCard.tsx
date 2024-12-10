@@ -6,13 +6,13 @@ type Props = {
 };
 
 function ProductCard({ product }: Props) {
-  const { title, price, image } = product;
+  const { title, price, thumbnail } = product;
 
   return (
     <div className="flex border-primary-800 border">
       <div className="flex-1 align-stretch relative">
         <Image
-          src={image}
+          src={thumbnail}
           fill
           alt={`Product ${title}`}
           className="flex-1 border-r border-primary-800 object-fit"

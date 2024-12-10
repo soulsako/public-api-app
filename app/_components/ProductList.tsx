@@ -1,7 +1,7 @@
 import ProductCard from "@/app/_components/ProductCard";
 import { TypeProducts } from "../_shared/shared";
 
-async function ProductList({ products }: TypeProducts) {
+function ProductList({ products }: TypeProducts) {
   return (
     <>
       {products.length > 0 ? (

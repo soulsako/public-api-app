@@ -3,7 +3,7 @@ import { Ratelimit } from "@upstash/ratelimit";
 import { NextRequest } from "next/server";
 import { Redis } from "@upstash/redis";
 
-const API_URL = "https://fakestoreapi.com/products";
+const API_URL = "https://dummyjson.com/products";
 
 const redis = new Redis({
   url: process.env.UPSTASH_REDIS_REST_URL,

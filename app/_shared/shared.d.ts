@@ -3,7 +3,7 @@ export interface TypeProduct {
   title: string;
   price: number;
   description: string;
-  image: string;
+  thumbnail: string;
 }
 
 export interface TypeProducts {

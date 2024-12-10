@@ -1,7 +1,6 @@
 "use client";
 
 import ProductList from "./_components/ProductList";
-import { Suspense } from "react";
 import Spinner from "./_components/Spinner";
 import { useState, useEffect } from "react";
 
@@ -13,7 +12,8 @@ export default function Page() {
     fetch("/api")
       .then((res) => res.json())
       .then((data) => {
-        setData(data);
+        console.log(data.products);
+        setData(data.products);
         setLoading(false);
       });
   }, []);
@@ -29,9 +29,7 @@ export default function Page() {
         accessories to everyday essentials, we offer cutting-edge products that make life easier,
         more fun, and more connected. Shop now and elevate your tech game!
       </p>
-      <Suspense fallback={<Spinner />}>
-        <ProductList products={data} />
-      </Suspense>
+      <ProductList products={data} />
     </div>
   );
 }
